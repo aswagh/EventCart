@@ -27,4 +27,9 @@ public class ProductController {
         return new ResponseEntity<>(productResponse,HttpStatus.FOUND);
     }
 
+    @PutMapping("/reduceQuantity/{productId}")
+    public void reduceQuantity(){
+
+    }
+
 }

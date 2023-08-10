@@ -1,0 +1,14 @@
+server:
+  port:9296
+
+spring:
+  application:
+    name: CONFIG-SERVER
+  cloud:
+    config:
+      server:
+        git:
+#          uri: file:///D:/Codes/Spring-app-configs
+          uri: https://github.com/aswagh/Spring-app-configs.git
+          clone-on-start: true
+

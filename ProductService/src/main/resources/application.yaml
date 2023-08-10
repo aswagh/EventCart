@@ -1,9 +1,11 @@
 server:
-  port: 8080
+  port: 8081
 
 spring:
   application:
     name: PRODUCT-SERVICE
+  config:
+    import: optional:configserver:http://localhost:9296
   datasource:
     url: jdbc:mysql://localhost:3306/productDB
     username: root
@@ -14,12 +16,13 @@ spring:
     hibernate:
       ddl-auto: update
 
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: ${eureka_server_address:http://localhost:8761/eureka}
-    register-with-eureka: true
-    fetch-registry: true
+# Below code is fetching from central Config Server prest at git repo
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    service-url:
+#      defaultZone: ${eureka_server_address:http://localhost:8761/eureka}
+#    register-with-eureka: true
+#    fetch-registry: true
 
