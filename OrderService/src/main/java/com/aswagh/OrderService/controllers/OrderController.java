@@ -17,7 +17,6 @@ public class OrderController {
 
     @Autowired
     private OrderService orderService;
-
     @RequestMapping("/placeOrder")
     public ResponseEntity<Long> placeOrder(@RequestBody OrderRequest orderRequest){
         log.info("Received request body for order");
